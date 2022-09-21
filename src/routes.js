@@ -47,7 +47,6 @@ const routes = [
   { path: '/vehicle/vehicleAuthType', name: 'Vehicle Auth Type', element: VehicleAuthType },
   { path: '/vehicle/vehicleType', name: 'Vehicle Type', element: VehicleType },
   { path: '/vehicle/blackList', name: 'Black List', element: BlackList },
-
   { path: '/rate', name: 'Rate', exact: true },
 ]
 
