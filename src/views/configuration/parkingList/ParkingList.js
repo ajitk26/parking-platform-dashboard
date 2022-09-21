@@ -62,7 +62,7 @@ const ParkingList = () => {
   ]
   return (
     <>
-      <div className="root">
+      <div className="parking-list">
         <h1>ParkingList</h1>
         <CTable columns={columns} items={items} />
       </div>
