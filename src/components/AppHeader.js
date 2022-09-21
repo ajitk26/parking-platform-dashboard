@@ -16,11 +16,7 @@ import {
   CDropdownItem,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-<<<<<<< HEAD
 import { cilMenu } from '@coreui/icons'
-=======
-import { cifAd, cilMenu } from '@coreui/icons'
->>>>>>> 44948a20e00bb16fe41d5904d4133440bd19c74c
 
 import { AppBreadcrumb } from './index'
 import { AppHeaderDropdown } from './header/index'
@@ -37,23 +33,10 @@ const AppHeader = () => {
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
-<<<<<<< HEAD
         {/* <CHeaderBrand className="mx-auto d-md-none" to="/">
         </CHeaderBrand> */}
         <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
-=======
-        <CHeaderBrand className="mx-auto d-md-none" to="/">
-          <CIcon icon={cifAd} height={70} alt="Logo" />
-        </CHeaderBrand>
-        <CHeaderNav className="d-none d-md-flex me-auto">
-          <CNavItem>
-            <CNavLink to="/dashboard" component={NavLink}>
-              Dashboard
-            </CNavLink>
-          </CNavItem>
-          <CNavItem>
->>>>>>> 44948a20e00bb16fe41d5904d4133440bd19c74c
             <CDropdown>
               <CDropdownToggle color="white">Services</CDropdownToggle>
               <CDropdownMenu>

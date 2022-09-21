@@ -18,11 +18,7 @@ const _nav = [
   {
     component: CNavGroup,
     name: 'Configuration',
-<<<<<<< HEAD
     to: '/configuration',
-=======
-    to: '/Configuration',
->>>>>>> 44948a20e00bb16fe41d5904d4133440bd19c74c
     icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
     items: [
       {
@@ -95,7 +91,6 @@ const _nav = [
       },
     ],
   },
-<<<<<<< HEAD
   {
     component: CNavGroup,
     name: 'Rate',
@@ -315,8 +310,6 @@ const _nav = [
       },
     ],
   },
-=======
->>>>>>> 44948a20e00bb16fe41d5904d4133440bd19c74c
 ]
 
 export default _nav

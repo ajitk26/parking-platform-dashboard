@@ -7,11 +7,7 @@ import routes from '../routes'
 
 const AppContent = () => {
   return (
-<<<<<<< HEAD
-    <CContainer sm>
-=======
     <CContainer lg>
->>>>>>> 44948a20e00bb16fe41d5904d4133440bd19c74c
       <Suspense fallback={<CSpinner color="primary" />}>
         <Routes>
           {routes.map((route, idx) => {
