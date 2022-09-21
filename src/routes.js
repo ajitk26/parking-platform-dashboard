@@ -21,6 +21,7 @@ const BatchExtension = React.lazy(() => import('./views/vehicle/batchExtension/B
 const BatchAuthorization = React.lazy(() =>
   import('./views/vehicle/batchAuthorization/BatchAuthorization'),
 )
+
 //Rates
 
 const routes = [
@@ -46,8 +47,6 @@ const routes = [
   { path: '/vehicle/vehicleAuthType', name: 'Vehicle Auth Type', element: VehicleAuthType },
   { path: '/vehicle/vehicleType', name: 'Vehicle Type', element: VehicleType },
   { path: '/vehicle/blackList', name: 'Black List', element: BlackList },
-<<<<<<< HEAD
-
   { path: '/rate', name: 'Rate', exact: true },
 ]
 
