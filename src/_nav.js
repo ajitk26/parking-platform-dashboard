@@ -18,7 +18,7 @@ const _nav = [
   {
     component: CNavGroup,
     name: 'Configuration',
-    to: '/Configuration',
+    to: '/configuration',
     icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
     items: [
       {
@@ -88,6 +88,225 @@ const _nav = [
         component: CNavItem,
         name: 'Vehicle Type',
         to: '/vehicle/vehicleType',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Rate',
+    to: '/rate',
+    icon: <CIcon icon={cilCarAlt} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Rate List',
+        to: '/rate/rateList',
+      },
+      {
+        component: CNavItem,
+        name: 'Electronic Invoices(No)',
+        to: '/rate/electronicInvoice',
+      },
+
+      {
+        component: CNavItem,
+        name: 'Holiday',
+        to: '/rate/holiday',
+      },
+      {
+        component: CNavItem,
+        name: 'Rule Management',
+        to: '/rate/ruleManagement',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Parking Space',
+    to: '/parkingSpace',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Parking List',
+        to: '/configuration/parkingList',
+      },
+      {
+        component: CNavItem,
+        name: 'Zone List',
+        to: '/configuration/zoneList',
+      },
+      {
+        component: CNavItem,
+        name: 'Equipments',
+        to: '/configuration/equipments',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Record',
+    to: '/record',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Parking List',
+        to: '/configuration/parkingList',
+      },
+      {
+        component: CNavItem,
+        name: 'Zone List',
+        to: '/configuration/zoneList',
+      },
+      {
+        component: CNavItem,
+        name: 'Equipments',
+        to: '/configuration/equipments',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'AutoPay Station',
+    to: '/autoPayStation',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Parking List',
+        to: '/configuration/parkingList',
+      },
+      {
+        component: CNavItem,
+        name: 'Zone List',
+        to: '/configuration/zoneList',
+      },
+      {
+        component: CNavItem,
+        name: 'Equipments',
+        to: '/configuration/equipments',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Analytics',
+    to: '/Analytics',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Parking List',
+        to: '/configuration/parkingList',
+      },
+      {
+        component: CNavItem,
+        name: 'Zone List',
+        to: '/configuration/zoneList',
+      },
+      {
+        component: CNavItem,
+        name: 'Equipments',
+        to: '/configuration/equipments',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Roles & Permission',
+    to: '/rolesAndPermission',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Parking List',
+        to: '/configuration/parkingList',
+      },
+      {
+        component: CNavItem,
+        name: 'Zone List',
+        to: '/configuration/zoneList',
+      },
+      {
+        component: CNavItem,
+        name: 'Equipments',
+        to: '/configuration/equipments',
+      },
+      {
+        component: CNavItem,
+        name: 'Park Configuration',
+        to: '/configuration/parkConfiguration',
       },
     ],
   },
