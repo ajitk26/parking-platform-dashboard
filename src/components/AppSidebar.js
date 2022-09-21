@@ -18,6 +18,7 @@ const AppSidebar = () => {
 
   return (
     <CSidebar
+      className="sidebar"
       position="fixed"
       unfoldable={unfoldable}
       visible={sidebarShow}
@@ -25,9 +26,6 @@ const AppSidebar = () => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
     >
-      <CSidebarBrand className="d-none d-md-flex" to="/">
-        <h3>Smart Parking</h3>
-      </CSidebarBrand>
       <CSidebarNav>
         <SimpleBar>
           <AppSidebarNav items={navigation} />
