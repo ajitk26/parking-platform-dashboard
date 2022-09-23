@@ -45,7 +45,7 @@ const ParkingList = () => {
       systemType: 'Otto',
       account: '@mdo',
       lastonline: '10:00 AM',
-      network: 'gtpl',
+      network: 'offline',
       operation: 'ok',
       _cellProps: { id: { scope: 'row' } },
     },
