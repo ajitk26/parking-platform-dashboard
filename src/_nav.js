@@ -1,7 +1,9 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
-import { cilCarAlt, cilPuzzle, cilSpeedometer } from '@coreui/icons'
+import { cilCarAlt, cilDollar, cilPuzzle, cilSpeaker, cilSpeedometer } from '@coreui/icons'
 import { CNavGroup, CNavItem } from '@coreui/react'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faSquareParking } from '@fortawesome/free-solid-svg-icons'
 
 const _nav = [
   {
@@ -32,9 +34,21 @@ const _nav = [
         to: '/configuration/zoneList',
       },
       {
-        component: CNavItem,
-        name: 'Equipments',
+        component: CNavGroup,
+        name: 'Equipment',
         to: '/configuration/equipments',
+        items: [
+          {
+            component: CNavItem,
+            name: 'Entrance & Exit',
+            to: '/configuration/equipments/entrance',
+          },
+          {
+            component: CNavItem,
+            name: 'Cashier',
+            to: '/configuration/equipments/cashier',
+          },
+        ],
       },
       {
         component: CNavItem,
@@ -95,7 +109,7 @@ const _nav = [
     component: CNavGroup,
     name: 'Rate',
     to: '/rate',
-    icon: <CIcon icon={cilCarAlt} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilDollar} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
@@ -124,7 +138,7 @@ const _nav = [
     component: CNavGroup,
     name: 'Parking Space',
     to: '/parkingSpace',
-    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilCarAlt} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
