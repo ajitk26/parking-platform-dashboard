@@ -37,6 +37,9 @@ const AppHeader = () => {
         </CHeaderBrand> */}
         <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
+            <CHeaderBrand>
+              <CIcon alt="Logo" />
+            </CHeaderBrand>
             <CDropdown>
               <CDropdownToggle color="white">Services</CDropdownToggle>
               <CDropdownMenu>

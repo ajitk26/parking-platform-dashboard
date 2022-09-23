@@ -5,10 +5,12 @@ const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 // Configuration
 const ParkingList = React.lazy(() => import('./views/configuration/parkingList/ParkingList'))
 const ZoneList = React.lazy(() => import('./views/configuration/zoneList/ZoneList'))
-const Equipments = React.lazy(() => import('./views/configuration/equipments/Equipments'))
 const ParkConfiguration = React.lazy(() =>
   import('./views/configuration/parkConfiguration/ParkConfiguration'),
 )
+//Equipment
+const Entrance = React.lazy(() => import('./views/configuration/equipments/entrance/Entrance'))
+const Cashier = React.lazy(() => import('./views/configuration/equipments/cashier/Cashier'))
 
 // Vehicle
 const VehicleList = React.lazy(() => import('./views/vehicle/vehicleList/VehicleList'))
@@ -31,7 +33,10 @@ const routes = [
   { path: '/configuration', name: 'Configuration', exact: true },
   { path: '/configuration/parkingList', name: 'Parking List', element: ParkingList },
   { path: '/configuration/zoneList', name: 'Zone List', element: ZoneList },
-  { path: '/configuration/equipments', name: 'Equipments', element: Equipments },
+  { path: '/configuration/equipments', name: 'Equipment', exact: true },
+  { path: '/configuration/equipments/entrance', name: 'Entrance', element: Entrance },
+  { path: '/configuration/equipments/cashier', name: 'Cashier', element: Cashier },
+
   {
     path: '/configuration/parkConfiguration',
     name: 'Park Configuration',
