@@ -25,11 +25,69 @@ const BatchAuthorization = React.lazy(() =>
 )
 
 //Rates
+const ElectronicInvoice = React.lazy(() =>
+  import('./views/rate/electronicInvoice/ElectronicInvoice'),
+)
+const GroupStoredValue = React.lazy(() => import('./views/rate/groupStoredValue/GroupStoredValue'))
+const Holiday = React.lazy(() => import('./views/rate/holiday/Holiday'))
+const PackageRules = React.lazy(() => import('./views/rate/packageRules/PackageRules'))
+const RateList = React.lazy(() => import('./views/rate/rateList/RateList'))
+const RuleManagement = React.lazy(() => import('./views/rate/ruleManagement/RuleManagement'))
+
+//Parking Space
+
+const CspaceQtySetting = React.lazy(() =>
+  import('./views/parkingSpace/cSpaceQtySetting/CspaceQtySetting'),
+)
+const GroupSpaceList = React.lazy(() =>
+  import('./views/parkingSpace/groupSpaceList/GroupSpaceList'),
+)
+const GroupSpaceVehicle = React.lazy(() =>
+  import('./views/parkingSpace/groupSpaceVehicle/GroupSpaceVehicle'),
+)
+
+//Record
+const EntranceRecord = React.lazy(() => import('./views/record/entranceRecord/EntranceRecord'))
+const ExitRecord = React.lazy(() => import('./views/record/exitRecord/ExitRecord'))
+const TransactionRecord = React.lazy(() =>
+  import('./views/record/transactionRecord/TransactionRecord'),
+)
+const OnSiteVehicle = React.lazy(() => import('./views/record/onSiteVehicle/OnSiteVehicle'))
+const MobilePaymentOrder = React.lazy(() =>
+  import('./views/record/mobilePaymentOrder/MobilePaymentOrder'),
+)
+
+const ExtensionRecord = React.lazy(() => import('./views/record/extensionRecord/ExtensionRecord'))
+const VehicleModifyRecord = React.lazy(() =>
+  import('./views/record/vehicleModifyRecord/VehicleModifyRecord'),
+)
+const FlashPaymentRecord = React.lazy(() =>
+  import('./views/record/flashPaymentRecord/FlashPaymentRecord'),
+)
+const BarrierOpenmRecord = React.lazy(() =>
+  import('./views/record/barrierOpen(M)Record/BarrierOpenmRecord'),
+)
+const ForceExitRecord = React.lazy(() => import('./views/record/forceExitRecord/ForceExitRecord'))
+
+const CspaceExtensionRecord = React.lazy(() =>
+  import('./views/record/cSpaceExtensionRecord/CspaceExtensionRecord'),
+)
+const TransactionRecordNo = React.lazy(() =>
+  import('./views/record/transactionRecordNo/TransactionRecordNo'),
+)
+const CashierRevenueRecord = React.lazy(() =>
+  import('./views/record/cashierRevenueRecord/CashierRevenueRecord'),
+)
+const BarrierOptionrRecord = React.lazy(() =>
+  import('./views/record/barrierOpen(R)Record/BarrierOpenrRecord'),
+)
+const PrepayOption = React.lazy(() => import('./views/record/prepayRecord/PrepayRecord'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
 
+  //Configuration
   { path: '/configuration', name: 'Configuration', exact: true },
   { path: '/configuration/parkingList', name: 'Parking List', element: ParkingList },
   { path: '/configuration/zoneList', name: 'Zone List', element: ZoneList },
@@ -42,9 +100,10 @@ const routes = [
     name: 'Park Configuration',
     element: ParkConfiguration,
   },
+  //Vehicle
 
   { path: '/vehicle', name: 'Vehicle', exact: true },
-  { path: '/vehicle/vehicleList', name: 'Vehicle', element: VehicleList },
+  { path: '/vehicle/vehicleList', name: 'Vehicle List', element: VehicleList },
   { path: '/vehicle/vehicleOnField', name: 'Vehicle On Field', element: VehicleOnField },
   { path: '/vehicle/batchExtension', name: 'Batch Extension', element: BatchExtension },
   { path: '/vehicle/batchAuthorization', name: 'Batch Authorization', element: BatchAuthorization },
@@ -52,7 +111,50 @@ const routes = [
   { path: '/vehicle/vehicleAuthType', name: 'Vehicle Auth Type', element: VehicleAuthType },
   { path: '/vehicle/vehicleType', name: 'Vehicle Type', element: VehicleType },
   { path: '/vehicle/blackList', name: 'Black List', element: BlackList },
+
+  //Rate
   { path: '/rate', name: 'Rate', exact: true },
+  { path: '/rate/rateList', name: 'Rate List', element: RateList },
+  { path: '/rate/electronicInvoice', name: 'Electronic Invoice No.', element: ElectronicInvoice },
+  { path: '/rate/packageRules', name: 'Package Rules No.', element: PackageRules },
+  {
+    path: '/rate/groupStoredValue',
+    name: 'Group Stored Value Management',
+    element: GroupStoredValue,
+  },
+  { path: '/rate/holiday', name: 'Holiday', element: Holiday },
+  { path: '/rate/ruleManagement', name: 'Rule Management No.', element: RuleManagement },
+
+  //Parking Space
+  { path: '/parkingSpace', name: 'Parking Space', exact: true },
+  { path: '/parkingSpace/groupSpaceList', name: 'Group-space list', element: GroupSpaceList },
+  {
+    path: '/parkingSpace/groupSpaceVehicle',
+    name: 'Group-space vehicle',
+    element: GroupSpaceVehicle,
+  },
+  {
+    path: '/parkingSpace/cSpaceQtySetting',
+    name: 'C-space qty setting',
+    element: CspaceQtySetting,
+  },
+  //Record
+  { path: '/record', name: 'Record', exact: true },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/exitRecord', name: 'Exit Record', element: ExitRecord },
+  { path: '/record/transactionRecord', name: 'Transaction Record', element: TransactionRecord },
+  { path: '/record/onSiteVehicle', name: 'On-site vehicle', element: OnSiteVehicle },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
 ]
 
 export default routes
