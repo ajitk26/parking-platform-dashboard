@@ -164,17 +164,20 @@ const Entrance = () => {
           <option value="3">50</option>
           <option value="4">All</option>
         </CFormSelect>
-        <CTable
-          columns={columns}
-          items={items}
-          style={{
-            width: '90vw',
-          }}
-          bordered
-          borderColor="secondary"
-          color="dark"
-          hover
-        />
+        <div style={{ overflow: 'auto' }}>
+          <CTable
+            columns={columns}
+            items={items}
+            style={{
+              width: '100%',
+              minWidth: '600px',
+            }}
+            bordered
+            borderColor="secondary"
+            color="dark"
+            hover
+          />
+        </div>
         <CPagination size="sm" align="end" aria-label="Page navigation example">
           <CPaginationItem style={{ color: 'black' }} disabled>
             Previous

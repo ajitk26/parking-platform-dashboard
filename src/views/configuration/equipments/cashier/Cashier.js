@@ -164,18 +164,20 @@ const Cashier = () => {
             }}
           />
         </div>
-        <CTable
-          columns={columns}
-          items={items}
-          style={{
-            width: '90vw',
-            margin: '1rem 0',
-          }}
-          bordered
-          borderColor="secondary"
-          color="dark"
-          hover
-        />
+        <div style={{ overflow: 'auto' }}>
+          <CTable
+            columns={columns}
+            items={items}
+            style={{
+              width: '100%',
+              minWidth: '600px',
+            }}
+            bordered
+            borderColor="secondary"
+            color="dark"
+            hover
+          />
+        </div>
         <CPagination size="sm" align="end" aria-label="Page navigation example">
           <CPaginationItem style={{ color: 'black' }} disabled>
             Previous
