@@ -53,7 +53,7 @@ const ParkingList = () => {
   return (
     <>
       <div className="parking-list">
-        <h1>ParkingList</h1>
+        <h1>Parking List</h1>
         <div
           style={{
             display: 'flex',

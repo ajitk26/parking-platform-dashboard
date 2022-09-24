@@ -93,7 +93,7 @@ const ZoneList = () => {
     <>
       <div className="parking-list">
         <div>
-          <h1>ZoneList</h1>
+          <h1>Zone List</h1>
           <div style={{ margin: '1rem 0' }}>
             <CButton color="info" shape="rounded-0">
               Create Auth Value
