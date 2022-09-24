@@ -1,6 +1,13 @@
-.parking-list {
+.conf-list {
     display: flex;
     flex-direction: column;
+}
+
+.entrance-input {
+    color: grey;
+    outline: none;
+    border: 1px solid rgb(206, 206, 206);
+    padding-left: 1rem;
 }
 
 .sidebar{

@@ -1,6 +1,39 @@
 import React from 'react'
-import { CTable, CPagination, CPaginationItem, CFormSelect } from '@coreui/react'
+import {
+  CTable,
+  CPagination,
+  CPaginationItem,
+  CFormSelect,
+  CButton,
+  CButtonGroup,
+} from '@coreui/react'
 const ParkingList = () => {
+  const properties = (val) => {
+    if (val === 'success') {
+      return (
+        <CButton color="success" variant="outline" size="sm">
+          Success
+        </CButton>
+      )
+    } else if (val === 'danger') {
+      return (
+        <CButton color="danger" variant="outline" size="sm">
+          Offline
+        </CButton>
+      )
+    }
+  }
+
+  const operation = () => {
+    return (
+      <CButtonGroup role="group" aria-label="Basic mixed styles example" size="sm">
+        <CButton color="info">View</CButton>
+        <CButton color="warning">Edit</CButton>
+        <CButton color="success">Update</CButton>
+      </CButtonGroup>
+    )
+  }
+
   const columns = [
     {
       key: 'id',
@@ -45,20 +78,20 @@ const ParkingList = () => {
       systemType: 'Otto',
       account: '@mdo',
       lastonline: '10:00 AM',
-      network: 'offline',
-      operation: 'ok',
+      network: properties('danger'),
+      operation: operation(),
       _cellProps: { id: { scope: 'row' } },
     },
   ]
   return (
     <>
-      <div className="parking-list">
-        <h1>Parking List</h1>
+      <div className="conf-list">
+        <h1>ParkingList</h1>
         <div
           style={{
             display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            justifyContent: 'space-around',
             alignContent: 'center',
             padding: '2rem 0',
             borderTop: '1px solid grey',
@@ -79,27 +112,12 @@ const ParkingList = () => {
             <option value="3">Three</option>
           </CFormSelect>
           <input type="text" placeholder="Parking Name"></input>
-          <div>
-            <button
-              style={{
-                border: 'none',
-                color: 'white',
-                backgroundColor: 'blue',
-                marginRight: '1rem',
-              }}
-            >
-              Search
-            </button>
-            <button
-              style={{
-                border: 'none',
-                color: 'white',
-                backgroundColor: 'grey',
-              }}
-            >
-              Reset
-            </button>
-          </div>
+          <CButton color="info" shape="rounded-0">
+            Search
+          </CButton>
+          <CButton color="secondary" shape="rounded-0">
+            Reset
+          </CButton>
         </div>
         <CFormSelect aria-label="Default select example" style={{ width: '10%', margin: '1rem 0' }}>
           <option>10</option>
@@ -108,7 +126,20 @@ const ParkingList = () => {
           <option value="3">50</option>
           <option value="4">All</option>
         </CFormSelect>
-        <CTable columns={columns} items={items} />
+        <div style={{ overflow: 'auto' }}>
+          <CTable
+            columns={columns}
+            items={items}
+            style={{
+              width: '100%',
+              minWidth: '600px',
+            }}
+            bordered
+            borderColor="secondary"
+            color="dark"
+            hover
+          />
+        </div>
         <CPagination size="sm" align="end" aria-label="Page navigation example">
           <CPaginationItem style={{ color: 'black' }} disabled>
             Previous
