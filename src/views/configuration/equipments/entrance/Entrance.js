@@ -172,9 +172,7 @@ const Entrance = () => {
               width: '100%',
               minWidth: '600px',
             }}
-            bordered
-            borderColor="secondary"
-            color="dark"
+            color="light"
             hover
           />
         </div>
