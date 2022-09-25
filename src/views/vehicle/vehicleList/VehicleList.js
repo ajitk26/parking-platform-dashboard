@@ -134,6 +134,24 @@ const VehicleList = () => {
         <div
           style={{
             display: 'flex',
+            margin: '1rem 0',
+            width: '20%',
+            justifyContent: 'space-between',
+          }}
+        >
+          <CButton color="info" shape="rounded-0" size="sm" style={{ height: '2rem' }}>
+            Export
+          </CButton>
+          <CButton color="info" shape="rounded-0" size="sm" style={{ height: '2rem' }}>
+            Import
+          </CButton>
+          <CButton color="success" shape="rounded-0" size="sm" style={{ height: '2rem' }}>
+            Create Vehicle
+          </CButton>
+        </div>
+        <div
+          style={{
+            display: 'flex',
             flexDirection: 'column',
             flexWrap: 'wrap',
             justifyContent: 'space-around',
@@ -150,7 +168,7 @@ const VehicleList = () => {
               flexDirection: 'row',
               width: '70%',
               minHeight: '5vh',
-              justifyContent: 'space-around',
+              justifyContent: 'space-between',
               flexWrap: 'wrap',
             }}
           >
@@ -180,7 +198,7 @@ const VehicleList = () => {
               flexDirection: 'row',
               width: '100%',
               minHeight: '5vh',
-              justifyContent: 'space-around',
+              justifyContent: 'space-between',
               alignItems: 'center',
               flexWrap: 'wrap',
             }}
@@ -207,13 +225,13 @@ const VehicleList = () => {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                width: '10%',
+                width: '11%',
               }}
             >
               <label htmlFor="expiresfrom">Expires From:</label>
               <input type="date" id="expiresfrom" name="expfrom" />
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', width: '10%' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '11%' }}>
               <label htmlFor="expiresto">Expires To:</label>
               <input type="date" id="expiresto" name="expfrom" />
             </div>
