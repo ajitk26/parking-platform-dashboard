@@ -172,9 +172,6 @@ const Cashier = () => {
               width: '100%',
               minWidth: '600px',
             }}
-            bordered
-            borderColor="secondary"
-            color="dark"
             hover
           />
         </div>

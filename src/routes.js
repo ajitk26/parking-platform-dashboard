@@ -99,6 +99,19 @@ const TransactionpayRecord = React.lazy(() =>
   import('./views/autoPayStation/transactionRecord/TransactionpayRecord'),
 )
 
+//Analytics
+const DailyReport = React.lazy(() => import('./views/analytics/dailyReport/DailyReport'))
+const MonthlyReport = React.lazy(() => import('./views/analytics/monthlyReport/MonthlyReport'))
+
+//Roles & Permission
+const EmployeeManagement = React.lazy(() =>
+  import('./views/rolesAndPermission/employeeManagement/EmployeeManagement'),
+)
+const RoleSetting = React.lazy(() => import('./views/rolesAndPermission/roleSetting/UserSetting'))
+const UserManagement = React.lazy(() =>
+  import('./views/rolesAndPermission/userManagement/UserManagement'),
+)
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -221,6 +234,22 @@ const routes = [
     name: 'Transaction-record',
     element: TransactionpayRecord,
   },
+
+  //Analytics
+
+  { path: '/analytics', name: 'Analytics', exact: true },
+  { path: '/analytics/dailyReport', name: 'Daily-report', element: DailyReport },
+  { path: '/analytics/monthlyReport', name: 'Monthly-report', element: MonthlyReport },
+
+  //Roles & Permission
+  { path: '/rolesAndPermission', name: 'Roles & Permission', exact: true },
+  {
+    path: '/rolesAndPermission/employeeManagement',
+    name: 'Employee-management',
+    element: EmployeeManagement,
+  },
+  { path: '/rolesAndPermission/roleSetting', name: 'Role-setting', element: RoleSetting },
+  { path: '/rolesAndPermission/userManagement', name: 'User-management', element: UserManagement },
 ]
 
 export default routes
