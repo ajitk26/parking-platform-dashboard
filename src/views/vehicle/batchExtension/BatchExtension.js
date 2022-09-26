@@ -1,20 +1,19 @@
 import React from 'react'
-import {
-  CTable,
-  CPagination,
-  CPaginationItem,
-  CFormSelect,
-  CButton,
-  CButtonGroup,
-} from '@coreui/react'
+import { CTable, CPagination, CPaginationItem, CFormSelect, CButton } from '@coreui/react'
 const BatchExtension = () => {
   const [platecardInput, setPlatecardInput] = React.useState('My passPlate No. Search')
 
   const platecardInputtype = (val) => {
     if (val === '2') {
       setPlatecardInput('My passCard No. Search')
-    } else {
-      setPlatecardInput('My passPlate No. Search')
+    } else if (val === '3') {
+      setPlatecardInput('May passName Search')
+    } else if (val === '4') {
+      setPlatecardInput('May passTel. Search')
+    } else if (val === '5') {
+      setPlatecardInput('May passParkingNo. Search')
+    } else if (val === '6') {
+      setPlatecardInput('May passAddress Search')
     }
   }
 
@@ -40,18 +39,6 @@ const BatchExtension = () => {
     }
   }
 
-  const operation = () => {
-    return (
-      <CButtonGroup role="group" aria-label="Basic mixed styles example" size="sm">
-        <CButton color="info">View</CButton>
-        <CButton color="success">Discount</CButton>
-        <CButton color="warning">Edit</CButton>
-        <CButton color="danger">Manual Exit</CButton>
-        <CButton color="warning">Filter</CButton>
-      </CButtonGroup>
-    )
-  }
-
   const columns = [
     {
       key: 'plateno',
@@ -59,28 +46,8 @@ const BatchExtension = () => {
       _props: { scope: 'col' },
     },
     {
-      key: 'photo',
-      label: 'Photo',
-      _props: { scope: 'col' },
-    },
-    {
-      key: 'adjust',
-      label: 'Adjust',
-      _props: { scope: 'col' },
-    },
-    {
       key: 'cardno',
       label: 'Card No.',
-      _props: { scope: 'col' },
-    },
-    {
-      key: 'parkingname',
-      label: 'Parking Name',
-      _props: { scope: 'col' },
-    },
-    {
-      key: 'entrytime',
-      label: 'Entry Time',
       _props: { scope: 'col' },
     },
     {
@@ -94,41 +61,61 @@ const BatchExtension = () => {
       _props: { scope: 'col' },
     },
     {
-      key: 'paystatus',
-      label: 'Pay Status',
+      key: 'parkingname',
+      label: 'Parking Name',
       _props: { scope: 'col' },
     },
     {
-      key: 'fare',
-      label: 'Fare',
+      key: 'authzone',
+      label: 'Auth Zone.',
       _props: { scope: 'col' },
     },
     {
-      key: 'operation',
-      label: 'Operation',
+      key: 'status',
+      label: 'Status',
+      _props: { scope: 'col' },
+    },
+    {
+      key: 'effect',
+      label: 'Effect',
+      _props: { scope: 'col' },
+    },
+    {
+      key: 'expired',
+      label: 'Expired',
+      _props: { scope: 'col' },
+    },
+    {
+      key: 'driver',
+      label: 'Driver',
+      _props: { scope: 'col' },
+    },
+    {
+      key: 'address',
+      label: 'Address',
       _props: { scope: 'col' },
     },
   ]
   const items = [
     {
       plateno: 'ABC123',
-      photo: ' ',
-      adjust: properties('warning', 'Adjust'),
       cardno: ' ',
-      parkingname: 'Mall',
-      entrytime: properties('success', '11/05/2021 15:02:02'),
       vehicleauthtype: 'Passport Car',
       vehicletype: 'Small Car',
-      paystatus: properties('danger', 'Un-Paid'),
-      fare: '0.00',
-      operation: operation(),
+      parkingname: 'Mall',
+      authzone: properties('success', 'Main Garage'),
+      status: properties('danger', 'OUT'),
+      effect: '12/11/2021',
+      expired: properties('success', '11/05/2021 15:02:02'),
+      driver: '1',
+      address: ' ',
       _cellProps: { id: { scope: 'row' } },
     },
   ]
   return (
     <>
       <div className="conf-list">
-        <h1>Vehicle On Field</h1>
+        <h1>Batch Extension</h1>
         <div
           style={{
             display: 'flex',
@@ -138,10 +125,7 @@ const BatchExtension = () => {
           }}
         >
           <CButton color="success" shape="rounded-0" size="sm" style={{ height: '2rem' }}>
-            Manual Entry
-          </CButton>
-          <CButton color="danger" shape="rounded-0" size="sm" style={{ height: '2rem' }}>
-            Man-Exit ResultSet
+            Batch Extension
           </CButton>
         </div>
         <div
@@ -169,15 +153,11 @@ const BatchExtension = () => {
           >
             <CFormSelect aria-label="Default select example" style={{ width: '20%' }}>
               <option>Mall</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">Mall</option>
             </CFormSelect>
             <CFormSelect aria-label="Default select example" style={{ width: '20%' }}>
               <option>- Choose Zone -</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">Main Garage</option>
             </CFormSelect>
             <CFormSelect
               aria-label="Default select example"
@@ -189,6 +169,10 @@ const BatchExtension = () => {
             >
               <option value="1">Plate No.</option>
               <option value="2">Card No.</option>
+              <option value="3">Name</option>
+              <option value="4">Tel.</option>
+              <option value="5">Parking No.</option>
+              <option value="6">Address</option>
             </CFormSelect>
             <input type="text" placeholder={`${platecardInput}`} />
           </div>
@@ -229,7 +213,7 @@ const BatchExtension = () => {
                 width: '11%',
               }}
             >
-              <label htmlFor="expiresfrom">Entry Time</label>
+              <label htmlFor="expiresfrom">Expires From</label>
               <input type="date" id="expiresfrom" name="expfrom" />
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', width: '11%' }}>
