@@ -191,7 +191,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Exit Record',
-        to: '/record/existRecord',
+        to: '/record/exitRecord',
       },
       {
         component: CNavItem,
@@ -256,7 +256,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'PrePay Record',
-        to: '/record/prePayRecord',
+        to: '/record/prepayRecord',
       },
     ],
   },

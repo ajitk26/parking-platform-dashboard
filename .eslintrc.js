@@ -1,7 +1,7 @@
 module.exports = {
   // parser: '@typescript-eslint/parser', // Specifies the ESLint parser
   parserOptions: {
-    ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
+    ecmaVersion: 2022, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports
     ecmaFeatures: {
       jsx: true, // Allows for the parsing of JSX
@@ -20,7 +20,7 @@ module.exports = {
   ],
   plugins: ['react', 'react-hooks', 'prettier'],
   rules: {
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
   },
