@@ -234,6 +234,7 @@ const routes = [
     name: 'Transaction-record',
     element: TransactionpayRecord,
   },
+
   //Analytics
 
   { path: '/analytics', name: 'Analytics', exact: true },
