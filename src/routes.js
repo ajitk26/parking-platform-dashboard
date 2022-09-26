@@ -81,7 +81,36 @@ const CashierRevenueRecord = React.lazy(() =>
 const BarrierOptionrRecord = React.lazy(() =>
   import('./views/record/barrierOpen(R)Record/BarrierOpenrRecord'),
 )
-const PrepayOption = React.lazy(() => import('./views/record/prepayRecord/PrepayRecord'))
+const PrepayRecord = React.lazy(() => import('./views/record/prepayRecord/PrepayRecord'))
+
+//AutoPay Station
+const ActionLogging = React.lazy(() => import('./views/autoPayStation/actionLogging/ActionLogging'))
+const CashAddRecord = React.lazy(() => import('./views/autoPayStation/cashAddRecord/CashAddRecord'))
+const CassetteAndCashbox = React.lazy(() =>
+  import('./views/autoPayStation/cassetteAndCashbox/CassetteAndCashbox'),
+)
+const ReserveCashboxRecord = React.lazy(() =>
+  import('./views/autoPayStation/reserveCashboxRecord/ReserveCashboxRecord'),
+)
+const SettlementRecord = React.lazy(() =>
+  import('./views/autoPayStation/settlementRecord/SettlementRecord'),
+)
+const TransactionpayRecord = React.lazy(() =>
+  import('./views/autoPayStation/transactionRecord/TransactionpayRecord'),
+)
+
+//Analytics
+const DailyReport = React.lazy(() => import('./views/analytics/dailyReport/DailyReport'))
+const MonthlyReport = React.lazy(() => import('./views/analytics/monthlyReport/MonthlyReport'))
+
+//Roles & Permission
+const EmployeeManagement = React.lazy(() =>
+  import('./views/rolesAndPermission/employeeManagement/EmployeeManagement'),
+)
+const RoleSetting = React.lazy(() => import('./views/rolesAndPermission/roleSetting/UserSetting'))
+const UserManagement = React.lazy(() =>
+  import('./views/rolesAndPermission/userManagement/UserManagement'),
+)
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -144,17 +173,83 @@ const routes = [
   { path: '/record/exitRecord', name: 'Exit Record', element: ExitRecord },
   { path: '/record/transactionRecord', name: 'Transaction Record', element: TransactionRecord },
   { path: '/record/onSiteVehicle', name: 'On-site vehicle', element: OnSiteVehicle },
-  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
-  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
-  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
-  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
-  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
-  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
-  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
-  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
-  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
-  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
-  { path: '/record/entranceRecord', name: 'Entrance Record', element: EntranceRecord },
+  { path: '/record/mobilePaymentOrder', name: 'Mobile payment order', element: MobilePaymentOrder },
+  { path: '/record/extensionRecord', name: 'Extension Record', element: ExtensionRecord },
+  {
+    path: '/record/vehicleModifyRecord',
+    name: 'Vehicle modify record',
+    element: VehicleModifyRecord,
+  },
+  { path: '/record/flashPaymentRecord', name: 'Flash payment Record', element: FlashPaymentRecord },
+  {
+    path: '/record/barrierOpen(M)Record',
+    name: 'Barrier open(M) record ',
+    element: BarrierOpenmRecord,
+  },
+  { path: '/record/forceExitRecord', name: 'Force-exit record', element: ForceExitRecord },
+  {
+    path: '/record/cSpaceExtensionRecord',
+    name: 'C-space extension record',
+    element: CspaceExtensionRecord,
+  },
+  {
+    path: '/record/transactionRecordNo',
+    name: 'Transaction record no.',
+    element: TransactionRecordNo,
+  },
+  {
+    path: '/record/cashierRevenueRecord',
+    name: 'Cashier revenue record',
+    element: CashierRevenueRecord,
+  },
+  {
+    path: '/record/barrierOpen(R)Record',
+    name: 'Barrier-open(R)-record',
+    element: BarrierOptionrRecord,
+  },
+  { path: '/record/prepayRecord', name: 'Prepay-Record', element: PrepayRecord },
+
+  //AutoPay Station
+
+  { path: '/autoPayStation', name: 'Autopay-station', exact: true },
+  { path: '/autoPayStation/actionLogging', name: 'Action-logging', element: ActionLogging },
+  { path: '/autoPayStation/cashAddRecord', name: 'Cash-add-record', element: CashAddRecord },
+  {
+    path: '/autoPayStation/cassetteAndCashbox',
+    name: 'Cassette & cashbox',
+    element: CassetteAndCashbox,
+  },
+  {
+    path: '/autoPayStation/reserveCashboxRecord',
+    name: 'Reserver-cashbox-record',
+    element: ReserveCashboxRecord,
+  },
+  {
+    path: '/autoPayStation/settlementRecord',
+    name: 'Settlement-record',
+    element: SettlementRecord,
+  },
+  {
+    path: '/autoPayStation/transactionRecord',
+    name: 'Transaction-record',
+    element: TransactionpayRecord,
+  },
+
+  //Analytics
+
+  { path: '/analytics', name: 'Analytics', exact: true },
+  { path: '/analytics/dailyReport', name: 'Daily-report', element: DailyReport },
+  { path: '/analytics/monthlyReport', name: 'Monthly-report', element: MonthlyReport },
+
+  //Roles & Permission
+  { path: '/rolesAndPermission', name: 'Roles & Permission', exact: true },
+  {
+    path: '/rolesAndPermission/employeeManagement',
+    name: 'Employee-management',
+    element: EmployeeManagement,
+  },
+  { path: '/rolesAndPermission/roleSetting', name: 'Role-setting', element: RoleSetting },
+  { path: '/rolesAndPermission/userManagement', name: 'User-management', element: UserManagement },
 ]
 
 export default routes
