@@ -1,18 +1,31 @@
 .conf-list {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .entrance-input {
-    color: grey;
-    outline: none;
-    border: 1px solid rgb(206, 206, 206);
-    padding-left: 1rem;
+  color: grey;
+  outline: none;
+  border: 1px solid rgb(206, 206, 206);
+  padding-left: 1rem;
 }
 
-.sidebar{
-    width: 16.6rem;
-    margin-top: 7rem;
-    background-color:rgb(106, 90, 205)
+.sidebar {
+  width: 16.6rem;
+  margin-top: 118px;
+  background-color: rgb(106, 90, 205);
 }
 
+.sidebutton{
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+
+}
+.chartcontainer{
+  display: flex;
+}
+.todo{
+  padding-top: 16px;
+
+}
