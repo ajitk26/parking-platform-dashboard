@@ -6,7 +6,10 @@ import {
   CFormSelect,
   CButton,
   CButtonGroup,
+  CInputGroup,
+  CInputGroupText,
 } from '@coreui/react'
+import Popup from 'reactjs-popup'
 const RateList = () => {
   const properties = (val, str) => {
     if (val === 'success') {
@@ -123,9 +126,83 @@ const RateList = () => {
           <CButton color="success" shape="rounded-0" size="sm" style={{ height: '2rem' }}>
             Maximum Charge per Day
           </CButton>
-          <CButton color="success" shape="rounded-0" size="sm" style={{ height: '2rem' }}>
-            Create Rate
-          </CButton>
+          <Popup
+            trigger={
+              <CButton color="success" shape="rounded-0" size="sm" style={{ height: '2rem' }}>
+                Create Rate
+              </CButton>
+            }
+            modal
+            nested
+          >
+            <div className="popup-forms">
+              <h2 style={{ paddingTop: '1rem' }}>Mall</h2>
+              <CInputGroup className="form-content">
+                <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                  Garage:
+                </CInputGroupText>
+                <CFormSelect id="inputGroupSelect01">
+                  <option>-Choose Zone-</option>
+                  <option value="1">Main Garage</option>
+                </CFormSelect>
+              </CInputGroup>
+
+              <CInputGroup className="form-content">
+                <CInputGroupText component="label" htmlFor="inputGroupSelect02">
+                  Vehicle Auth Type
+                </CInputGroupText>
+                <CFormSelect id="inputGroupSelect02">
+                  <option value="1">VIP</option>
+                  <option value="2">Passport Car</option>
+                  <option value="3">Stored value Car</option>
+                  <option value="4">Parking</option>
+                  <option value="5">Free Car</option>
+                  <option value="6">Parking pool Car</option>
+                  <option value="7">Hourly Rental Car</option>
+                </CFormSelect>
+              </CInputGroup>
+
+              <CInputGroup className="form-content">
+                <CInputGroupText component="label" htmlFor="inputGroupSelect02">
+                  Vehicle Type
+                </CInputGroupText>
+                <CFormSelect id="inputGroupSelect03" aria-label="Example select with button addon">
+                  <option value="1">Motorcycle</option>
+                  <option value="2">Small Car</option>
+                  <option value="3">Medium Car</option>
+                  <option value="4">Large Car</option>
+                  <option value="5">Spare Model 1</option>
+                  <option value="6">Spare Model 2</option>
+                </CFormSelect>
+              </CInputGroup>
+              <CInputGroup className="form-content">
+                <CInputGroupText component="label" htmlFor="inputGroupSelect02">
+                  Rate Type
+                </CInputGroupText>
+                <CFormSelect id="inputGroupSelect04" aria-label="Example select with button addon">
+                  <option value="1">Charge for simple accumulation</option>
+                  <option value="2">Charge when accumulating</option>
+                  <option value="3">Charge by Day</option>
+                </CFormSelect>
+              </CInputGroup>
+              <div
+                style={{
+                  width: '30%',
+                  height: '2rem',
+                  margin: 'auto',
+                  display: 'flex',
+                  justifyContent: 'space-around',
+                }}
+              >
+                <CButton color="success" size="sm">
+                  Submit
+                </CButton>
+                <CButton color="danger" size="sm">
+                  Close
+                </CButton>
+              </div>
+            </div>
+          </Popup>
         </div>
         <div
           style={{
