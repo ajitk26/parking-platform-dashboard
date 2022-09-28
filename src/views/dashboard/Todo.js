@@ -11,15 +11,15 @@ const style = {
 
 const Todo = () => {
   return (
-    <>
-      <div className="todo">
-        <Typography variant="h9" color="inherit" sx={{ boxShadow: 0 }}>
+    <div className="todoContainer">
+      <div className="todoTitle">
+        <Typography variant="h9" color="inherit">
           TO DO LIST
         </Typography>
         <Divider />
       </div>
 
-      <List sx={style} component="nav" label="To do list">
+      <List component="nav" label="To do list">
         <ListItem button divider>
           <ListItemText primary="Extension" />
           <ListItemText primary="2" sx={{ color: 'red' }} />
@@ -35,7 +35,24 @@ const Todo = () => {
         </ListItem>
         <Divider />
       </List>
-    </>
+      <div>
+        <Typography variant="h9" color="inherit">
+          VEHICLE ON FIELD
+        </Typography>
+        <Divider />
+        <List sx={style} component="nav" label="Vehicle-on-field" className="dashboardVehicleList">
+          <ListItem button divider>
+            <ListItemText primary="Tempo" />
+            <ListItemText primary="26" sx={{ color: 'blue' }} />
+          </ListItem>
+          <Divider />
+          <ListItem button divider>
+            <ListItemText primary="Non-Tempo" />
+            <ListItemText primary="0" sx={{ color: 'blue' }} />
+          </ListItem>
+        </List>
+      </div>
+    </div>
   )
 }
 

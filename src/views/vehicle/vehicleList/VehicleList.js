@@ -221,7 +221,7 @@ const VehicleList = () => {
               <option value="2">Two</option>
               <option value="3">Three</option>
             </CFormSelect>
-            <div
+            {/* <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -234,7 +234,7 @@ const VehicleList = () => {
             <div style={{ display: 'flex', flexDirection: 'column', width: '11%' }}>
               <label htmlFor="expiresto">Expires To:</label>
               <input type="date" id="expiresto" name="expfrom" />
-            </div>
+            </div> */}
             <CButton color="info" shape="rounded-0" size="sm" style={{ height: '2rem' }}>
               Search
             </CButton>

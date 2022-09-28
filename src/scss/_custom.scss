@@ -19,13 +19,26 @@
 .sidebutton{
   display: flex;
   justify-content: space-around;
-  gap: 8px;
+  gap: 10px;
 
 }
 .chartcontainer{
   display: flex;
 }
-.todo{
+.todoTitle{
   padding-top: 16px;
 
 }
+
+.dashboardVehicleList{
+  display: flex;
+  gap:3px
+}
+.todoContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.recentlyUsed{
+  margin-left: 17px;
+  }

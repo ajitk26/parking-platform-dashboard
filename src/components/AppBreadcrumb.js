@@ -1,13 +1,9 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import DriveEtaIcon from '@mui/icons-material/DriveEta'
-import CreateIcon from '@mui/icons-material/Create'
-import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted'
-import DashboardIcon from '@mui/icons-material/Dashboard'
+import { CBreadcrumb, CBreadcrumbItem } from '@coreui/react'
+import SideButton from '../components/SideButton'
 
 import routes from '../routes'
-
-import { CBreadcrumb, CBreadcrumbItem, CButtonGroup, CButton, CTooltip } from '@coreui/react'
 
 const AppBreadcrumb = () => {
   const currentLocation = useLocation().pathname
@@ -37,7 +33,8 @@ const AppBreadcrumb = () => {
 
   return (
     <>
-      <CButtonGroup
+      <SideButton />
+      {/* <CButtonGroup
         role="group"
         aria-label="Basic mixed styles example buttonelem"
         className="sidebutton"
@@ -54,7 +51,7 @@ const AppBreadcrumb = () => {
         <CTooltip content="Transaction record" placement="top">
           <CButton color="danger">{<FormatListBulletedIcon />}</CButton>
         </CTooltip>
-      </CButtonGroup>
+      </CButtonGroup> */}
       <CBreadcrumb className="m-0 ms-2 ">
         <CBreadcrumbItem href="/">Home</CBreadcrumbItem>
         {breadcrumbs.map((breadcrumb, index) => {
