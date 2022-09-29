@@ -125,7 +125,7 @@ const BatchAuthorization = () => {
           }}
         >
           <CButton color="success" shape="rounded-0" size="sm" style={{ height: '2rem' }}>
-            Batch <Authorization></Authorization>
+            Batch Authorization
           </CButton>
         </div>
         <div
