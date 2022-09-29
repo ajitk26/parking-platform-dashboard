@@ -1,9 +1,9 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
+import { CBreadcrumb, CBreadcrumbItem } from '@coreui/react'
+import SideButton from '../components/SideButton'
 
 import routes from '../routes'
-
-import { CBreadcrumb, CBreadcrumbItem } from '@coreui/react'
 
 const AppBreadcrumb = () => {
   const currentLocation = useLocation().pathname
@@ -32,19 +32,40 @@ const AppBreadcrumb = () => {
   const breadcrumbs = getBreadcrumbs(currentLocation)
 
   return (
-    <CBreadcrumb className="m-0 ms-2 ">
-      <CBreadcrumbItem href="/">Home</CBreadcrumbItem>
-      {breadcrumbs.map((breadcrumb, index) => {
-        return (
-          <CBreadcrumbItem
-            {...(breadcrumb.active ? { active: true } : { href: breadcrumb.pathname })}
-            key={index}
-          >
-            {breadcrumb.name}
-          </CBreadcrumbItem>
-        )
-      })}
-    </CBreadcrumb>
+    <>
+      <SideButton />
+      {/* <CButtonGroup
+        role="group"
+        aria-label="Basic mixed styles example buttonelem"
+        className="sidebutton"
+      >
+        <CTooltip content="New vehicle" placement="top">
+          <CButton color="success">{<DriveEtaIcon />}</CButton>
+        </CTooltip>
+        <CTooltip content="Vehicle List" placement="top">
+          <CButton color="primary">{<CreateIcon />}</CButton>
+        </CTooltip>
+        <CTooltip content="Vehicle on field" placement="top">
+          <CButton color="warning">{<DashboardIcon />}</CButton>
+        </CTooltip>
+        <CTooltip content="Transaction record" placement="top">
+          <CButton color="danger">{<FormatListBulletedIcon />}</CButton>
+        </CTooltip>
+      </CButtonGroup> */}
+      <CBreadcrumb className="m-0 ms-2 ">
+        <CBreadcrumbItem href="/">Home</CBreadcrumbItem>
+        {breadcrumbs.map((breadcrumb, index) => {
+          return (
+            <CBreadcrumbItem
+              {...(breadcrumb.active ? { active: true } : { href: breadcrumb.pathname })}
+              key={index}
+            >
+              {breadcrumb.name}
+            </CBreadcrumbItem>
+          )
+        })}
+      </CBreadcrumb>
+    </>
   )
 }
 
