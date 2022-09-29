@@ -1,13 +1,13 @@
 .conf-list {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .entrance-input {
-    color: grey;
-    outline: none;
-    border: 1px solid rgb(206, 206, 206);
-    padding-left: 1rem;
+  color: grey;
+  outline: none;
+  border: 1px solid rgb(206, 206, 206);
+  padding-left: 1rem;
 }
 
 .popup-forms {
@@ -27,9 +27,35 @@
     margin: auto !important;
 }
 
-.sidebar{
-    width: 16rem;
-    margin-top: 7rem;
-    background-color:rgb(106, 90, 205)
+.sidebar {
+  width: 16.6rem;
+  margin-top: 118px;
+  background-color: rgb(106, 90, 205);
 }
 
+.sidebutton{
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+
+}
+.chartcontainer{
+  display: flex;
+}
+.todoTitle{
+  padding-top: 16px;
+
+}
+
+.dashboardVehicleList{
+  display: flex;
+  gap:3px
+}
+.todoContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.recentlyUsed{
+  margin-left: 17px;
+  }
