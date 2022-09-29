@@ -11,15 +11,23 @@
 }
 
 .popup-forms {
-    width: 50vw;
+    width: 60vw;
     margin: auto;
-    height: 60vh;
+    top: 130px;
+    position: fixed;
+    left: 20vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     background-color: white;
     box-shadow: 0 0 10vw gray;
+    overflow: scroll;
+}
+
+.popup-forms::-webkit-scrollbar {
+  display: none;
 }
 
 .popup-forms .form-content {
@@ -28,9 +36,13 @@
 }
 
 .sidebar {
-  width: 16.6rem;
-  margin-top: 118px;
+  width: 16rem;
+  margin-top: 122px;
   background-color: rgb(106, 90, 205);
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .sidebutton{
@@ -39,9 +51,11 @@
   gap: 10px;
 
 }
+
 .chartcontainer{
   display: flex;
 }
+
 .todoTitle{
   padding-top: 16px;
 
