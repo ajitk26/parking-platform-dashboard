@@ -59,3 +59,29 @@
 .recentlyUsed{
   margin-left: 17px;
   }
+
+.bottomPanel{
+  display: flex;
+  gap: 8px;
+}
+.summaryContainer{
+display: flex;
+gap: 1px;
+margin-top: 25px;
+}
+
+
+.summaryTitlePanel{
+  display: flex;
+}
+
+.supportedTitle{
+  margin-left: 38rem;
+}
+.recentTitle{
+  margin-left: 13rem;
+}
+.boxItem{
+  display: flex;
+  flex-direction: column;
+}
