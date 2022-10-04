@@ -327,9 +327,125 @@ const RuleManagement = () => {
                   <p>Rule Name: {rule.modifytime}</p>
                   <p>Rule Name: {rule.ruledescription}</p>
                 </CCardBody>
-                <CButton color="info" id="3">
-                  Create Rule
-                </CButton>
+                <Popup
+                  trigger={
+                    <CButton color="info" id="1">
+                      Create Rule
+                    </CButton>
+                  }
+                  nested
+                  modal
+                >
+                  {(close) => (
+                    <div className="popup-forms">
+                      <h2 style={{ paddingTop: '1rem' }}>Mall</h2>
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Rule Name :
+                        </CInputGroupText>
+                        <CFormInput type="text" placeholder="Rule name"></CFormInput>
+                      </CInputGroup>
+
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Recharge Discount :
+                        </CInputGroupText>
+                        <CFormRange
+                          min="5%"
+                          max="95%"
+                          defaultValue="80%"
+                          id="customRange2"
+                          style={{
+                            width: '70%',
+                            height: '100%',
+                            padding: '0.5rem 3rem',
+                            border: '1px solid lightgray',
+                            borderRadius: '0 5px 5px 0',
+                          }}
+                        />
+                      </CInputGroup>
+
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Enable self Recharge :
+                        </CInputGroupText>
+                        <CFormCheck
+                          type="radio"
+                          name="flexRadioDefault1"
+                          id="flexRadioDefault2"
+                          label="Enable"
+                          defaultChecked
+                        />
+                        <CFormCheck
+                          type="radio"
+                          name="flexRadioDefault1"
+                          id="flexRadioDefault1"
+                          label="Not allowed"
+                        />
+                      </CInputGroup>
+
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Notify Owner :
+                        </CInputGroupText>
+                        <CFormCheck
+                          type="radio"
+                          name="flexRadioDefault2"
+                          id="flexRadioDefault3"
+                          label="Enable"
+                          defaultChecked
+                        />
+                        <CFormCheck
+                          type="radio"
+                          name="flexRadioDefault2"
+                          id="flexRadioDefault4"
+                          label="No notification"
+                        />
+                      </CInputGroup>
+
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Maximum Recharge amount :
+                        </CInputGroupText>
+                        <CFormInput></CFormInput>
+                      </CInputGroup>
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Recharge amount to be confirmed by administrator :
+                        </CInputGroupText>
+                        <CFormInput></CFormInput>
+                      </CInputGroup>
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Phone No. of Management personnel :
+                        </CInputGroupText>
+                        <CFormInput></CFormInput>
+                      </CInputGroup>
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Rule description :
+                        </CInputGroupText>
+                        <CFormInput></CFormInput>
+                      </CInputGroup>
+                      <div
+                        style={{
+                          width: '30%',
+                          height: '2rem',
+                          margin: 'auto',
+                          display: 'flex',
+                          justifyContent: 'space-around',
+                        }}
+                      >
+                        <CButton color="success" size="sm">
+                          Submit
+                        </CButton>
+                        <CButton color="danger" size="sm" onClick={close}>
+                          Close
+                        </CButton>
+                      </div>
+                    </div>
+                  )}
+                </Popup>
               </CCard>
             )
           })}
@@ -347,9 +463,104 @@ const RuleManagement = () => {
                   <p>Rule Name: {rule.modifytime}</p>
                   <p>Rule Name: {rule.ruledescription}</p>
                 </CCardBody>
-                <CButton color="info" id="4">
-                  Create Rule
-                </CButton>
+                <Popup
+                  trigger={
+                    <CButton color="info" id="1">
+                      Create Rule
+                    </CButton>
+                  }
+                  nested
+                  modal
+                >
+                  {(close) => (
+                    <div className="popup-forms">
+                      <h2 style={{ paddingTop: '1rem' }}>Mall</h2>
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Rule Name :
+                        </CInputGroupText>
+                        <CFormSelect
+                          id="inputGroupSelect03"
+                          aria-label="Example select with button addon"
+                        >
+                          <option value="1">Motorcycle</option>
+                          <option value="2">Small Car</option>
+                          <option value="3">Medium Car</option>
+                          <option value="4">Large Car</option>
+                          <option value="5">Spare Model 1</option>
+                          <option value="6">Spare Model 2</option>
+                        </CFormSelect>
+                      </CInputGroup>
+
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Extension Rate :
+                        </CInputGroupText>
+                        <CFormInput></CFormInput>
+                      </CInputGroup>
+
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Enable self service extension :
+                        </CInputGroupText>
+                        <CFormCheck
+                          type="radio"
+                          name="flexRadioDefault1"
+                          id="flexRadioDefault2"
+                          label="Enable"
+                          defaultChecked
+                        />
+                        <CFormCheck
+                          type="radio"
+                          name="flexRadioDefault1"
+                          id="flexRadioDefault1"
+                          label="Not allowed"
+                        />
+                      </CInputGroup>
+
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Maximum delaye Months :
+                        </CInputGroupText>
+                        <CFormInput></CFormInput>
+                      </CInputGroup>
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Extension Months to be confirmed by administrator :
+                        </CInputGroupText>
+                        <CFormInput></CFormInput>
+                      </CInputGroup>
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Phone No. of Management personnel :
+                        </CInputGroupText>
+                        <CFormInput></CFormInput>
+                      </CInputGroup>
+                      <CInputGroup className="form-content">
+                        <CInputGroupText component="label" htmlFor="inputGroupSelect01">
+                          Rule description :
+                        </CInputGroupText>
+                        <CFormInput></CFormInput>
+                      </CInputGroup>
+                      <div
+                        style={{
+                          width: '30%',
+                          height: '2rem',
+                          margin: 'auto',
+                          display: 'flex',
+                          justifyContent: 'space-around',
+                        }}
+                      >
+                        <CButton color="success" size="sm">
+                          Submit
+                        </CButton>
+                        <CButton color="danger" size="sm" onClick={close}>
+                          Close
+                        </CButton>
+                      </div>
+                    </div>
+                  )}
+                </Popup>
               </CCard>
             )
           })}
