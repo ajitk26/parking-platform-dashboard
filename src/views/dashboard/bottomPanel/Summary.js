@@ -14,29 +14,30 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }))
 
-function FormRow() {
-  return (
-    <React.Fragment>
-      <Grid item xs={1.3}>
-        <Item>group</Item>
-      </Grid>
-    </React.Fragment>
-  )
-}
+// function FormRow() {
+//   const grid = ['Role', 'group Space', 'transaction']
+//   return (
+//     <React.Fragment>
+//       <Grid item xs={1.3}>
+//         <Item>{grid.map((grid) => grid)}</Item>
+//       </Grid>
+//     </React.Fragment>
+//   )
+// }
 
 export default function Summary() {
   return (
     <>
-      <div className="summaryTitlePanel">
+      {/* <div className="summaryTitlePanel">
         <div>Summary</div>
         <div className="supportedTitle">Supported</div>
 
         <div className="recentTitle">Recent consumption</div>
-      </div>
+      </div> */}
 
       <div className="bottomPanel">
         <CContainer className="summaryContainer">
-          <CRow sm={{ cols: 3, gutter: 3 }} lg={{ cols: 3, gutter: 4 }}>
+          <CRow sm={{ cols: 3, gutter: 2 }} lg={{ cols: 3, gutter: 2 }}>
             <CCol>
               <div className="boxItem">
                 <div className="p-5  h-100 border bg-light gridItem">
@@ -103,44 +104,47 @@ export default function Summary() {
             </CCol>
           </CRow>
         </CContainer>
+        <div>
+          <List conatainer component="nav">
+            <ListItem button divider>
+              <ListItemText primary="Cash" />
+              <ListItemText primary="Enabled" sx={{ color: 'blue', paddingLeft: 17 }} />
+            </ListItem>
+          </List>
+        </div>
+        <div>
+          <List component="nav" label="Recent consumption">
+            <ListItem button divider>
+              <ListItemText primary="RM0.00 " />
+              <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
+            </ListItem>
+            <ListItem button divider>
+              <ListItemText primary="RM0.00" />
+              <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
+            </ListItem>
 
-        <List conatainer component="nav">
-          <ListItem button divider>
-            <ListItemText primary="Cash" />
-            <ListItemText primary="Enabled" sx={{ color: 'blue', paddingLeft: 17 }} />
-          </ListItem>
-        </List>
-        <List component="nav" label="Recent consumption">
-          <ListItem button divider>
-            <ListItemText primary="RM0.00 " />
-            <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
-          </ListItem>
-          <ListItem button divider>
-            <ListItemText primary="RM0.00" />
-            <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
-          </ListItem>
-
-          <ListItem button divider>
-            <ListItemText primary="RM0.00" />
-            <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
-          </ListItem>
-          <ListItem button divider>
-            <ListItemText primary="RM0.00" />
-            <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
-          </ListItem>
-          <ListItem button divider>
-            <ListItemText primary="RM0.00" />
-            <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
-          </ListItem>
-          <ListItem button divider>
-            <ListItemText primary="RM0.00" />
-            <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
-          </ListItem>
-          <ListItem button divider>
-            <ListItemText primary="RM0.00" />
-            <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
-          </ListItem>
-        </List>
+            <ListItem button divider>
+              <ListItemText primary="RM0.00" />
+              <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
+            </ListItem>
+            <ListItem button divider>
+              <ListItemText primary="RM0.00" />
+              <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
+            </ListItem>
+            <ListItem button divider>
+              <ListItemText primary="RM0.00" />
+              <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
+            </ListItem>
+            <ListItem button divider>
+              <ListItemText primary="RM0.00" />
+              <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
+            </ListItem>
+            <ListItem button divider>
+              <ListItemText primary="RM0.00" />
+              <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />
+            </ListItem>
+          </List>
+        </div>
       </div>
     </>
   )
