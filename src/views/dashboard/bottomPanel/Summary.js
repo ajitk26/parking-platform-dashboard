@@ -1,40 +1,10 @@
 import * as React from 'react'
-import { styled } from '@mui/material/styles'
-import { Box, Divider } from '@mui/material'
 import { List, ListItem, ListItemText } from '@mui/material'
-import Paper from '@mui/material/Paper'
-import Grid from '@mui/material/Grid'
 import { CContainer, CRow, CCol } from '@coreui/react'
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}))
-
-// function FormRow() {
-//   const grid = ['Role', 'group Space', 'transaction']
-//   return (
-//     <React.Fragment>
-//       <Grid item xs={1.3}>
-//         <Item>{grid.map((grid) => grid)}</Item>
-//       </Grid>
-//     </React.Fragment>
-//   )
-// }
 
 export default function Summary() {
   return (
     <>
-      {/* <div className="summaryTitlePanel">
-        <div>Summary</div>
-        <div className="supportedTitle">Supported</div>
-
-        <div className="recentTitle">Recent consumption</div>
-      </div> */}
-
       <div className="bottomPanel">
         <CContainer className="summaryContainer">
           <CRow sm={{ cols: 3, gutter: 2 }} lg={{ cols: 3, gutter: 2 }}>
@@ -62,37 +32,37 @@ export default function Summary() {
             </CCol>
             <CCol>
               <div className="boxItem"></div>
-              <div className="p-5 border bg-light h-100">
-                <div style={{ color: 'blue', fontSize: 30, marginLeft: 18 }}>3</div>
-                <div>Non-Tempo</div>
+              <div className="py-5 border bg-light h-100">
+                <div style={{ color: 'blue', fontSize: 30, marginLeft: 68 }}>3</div>
+                <div style={{ marginLeft: 40 }}>Non-Tempo</div>
               </div>
             </CCol>
             <CCol>
               <div className="boxItem"></div>
-              <div className="p-5 border bg-light h-100">
-                <div style={{ color: 'blue', fontSize: 30, marginLeft: 18 }}>0</div>
-                <div>Group-Space</div>
+              <div className="py-5 border bg-light h-100">
+                <div style={{ color: 'blue', fontSize: 30, marginLeft: 68 }}>0</div>
+                <div style={{ marginLeft: 40 }}>Group-Space</div>
               </div>
             </CCol>
             <CCol>
               <div className="boxItem"></div>
-              <div className="p-5 border bg-light h-100">
-                <div style={{ color: 'blue', fontSize: 30, marginLeft: 18 }}>0</div>
-                <div>G-S Vehicle</div>
+              <div className="py-5 border bg-light h-100">
+                <div style={{ color: 'blue', fontSize: 30, marginLeft: 68 }}>0</div>
+                <div style={{ marginLeft: 40 }}>G-S Vehicle</div>
               </div>
             </CCol>
             <CCol>
               <div className="boxItem"></div>
-              <div className="p-5 border bg-light h-100">
-                <div style={{ color: 'blue', fontSize: 30, marginLeft: 18 }}>0</div>
-                <div>Merchant</div>
+              <div className="py-5 border bg-light h-100">
+                <div style={{ color: 'blue', fontSize: 30, marginLeft: 68 }}>0</div>
+                <div style={{ marginLeft: 40 }}>Merchant</div>
               </div>
             </CCol>
             <CCol>
               <div className="boxItem"></div>
-              <div className="p-5 border bg-light h-100">
-                <div style={{ color: 'blue', fontSize: 30, marginLeft: 18 }}>0</div>
-                <div>Mobile User</div>
+              <div className="py-5 border bg-light h-100">
+                <div style={{ color: 'blue', fontSize: 30, marginLeft: 68 }}>0</div>
+                <div style={{ marginLeft: 40 }}>Mobile User</div>
               </div>
             </CCol>
             <CCol>
@@ -106,6 +76,7 @@ export default function Summary() {
         </CContainer>
         <div>
           <List conatainer component="nav">
+            <div>Supported</div>
             <ListItem button divider>
               <ListItemText primary="Cash" />
               <ListItemText primary="Enabled" sx={{ color: 'blue', paddingLeft: 17 }} />
@@ -114,6 +85,7 @@ export default function Summary() {
         </div>
         <div>
           <List component="nav" label="Recent consumption">
+            <div>Recent consumption</div>
             <ListItem button divider>
               <ListItemText primary="RM0.00 " />
               <ListItemText primary="01/04/2" sx={{ paddingLeft: 17 }} />

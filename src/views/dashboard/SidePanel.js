@@ -45,7 +45,7 @@ export default function BasicTabs() {
   }
 
   return (
-    <Box sx={{ width: '100%', marginTop: '12px' }} className="sidePanelContainer">
+    <Box sx={{ width: '100%', marginTop: '12px' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="BULLETIN" {...a11yProps(0)} />
@@ -53,14 +53,14 @@ export default function BasicTabs() {
           <Tab label="PRODUCT" {...a11yProps(2)} />
         </Tabs>
       </Box>
+      <SidePanel value={value} index={0}>
+        No information
+      </SidePanel>
       <SidePanel value={value} index={1}>
-        Item Two
+        No information
       </SidePanel>
       <SidePanel value={value} index={2}>
-        Item Three
-      </SidePanel>
-      <SidePanel value={value} index={3}>
-        Item four
+        No information
       </SidePanel>
     </Box>
   )
