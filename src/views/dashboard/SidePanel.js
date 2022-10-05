@@ -4,8 +4,7 @@ import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
-import Summary from './Summary'
-function BottomPanel(props) {
+function SidePanel(props) {
   const { children, value, index, ...other } = props
 
   return (
@@ -25,7 +24,7 @@ function BottomPanel(props) {
   )
 }
 
-BottomPanel.propTypes = {
+SidePanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
@@ -46,29 +45,23 @@ export default function BasicTabs() {
   }
 
   return (
-    <div className="bottomPanelContainer">
-      <Box sx={{ width: '100%', marginTop: '12px' }}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-            <Tab label="SUMMARY" {...a11yProps(0)} />
-            <Tab label="PAYMENT" {...a11yProps(1)} />
-            <Tab label="VEHICLE TYPE" {...a11yProps(2)} />
-            <Tab label="VEHICLE AUTH" {...a11yProps(3)} />
-          </Tabs>
-        </Box>
-        <BottomPanel value={value} index={0}>
-          {<Summary />}
-        </BottomPanel>
-        <BottomPanel value={value} index={1}>
-          Item Two
-        </BottomPanel>
-        <BottomPanel value={value} index={2}>
-          Item Three
-        </BottomPanel>
-        <BottomPanel value={value} index={3}>
-          Item four
-        </BottomPanel>
+    <Box sx={{ width: '100%', marginTop: '12px' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+          <Tab label="BULLETIN" {...a11yProps(0)} />
+          <Tab label="SOLUTION" {...a11yProps(1)} />
+          <Tab label="PRODUCT" {...a11yProps(2)} />
+        </Tabs>
       </Box>
-    </div>
+      <SidePanel value={value} index={0}>
+        No information
+      </SidePanel>
+      <SidePanel value={value} index={1}>
+        No information
+      </SidePanel>
+      <SidePanel value={value} index={2}>
+        No information
+      </SidePanel>
+    </Box>
   )
 }

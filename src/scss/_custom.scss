@@ -11,28 +11,20 @@
 }
 
 .popup-forms {
-    width: 60vw;
-    margin: auto;
-    top: 130px;
-    position: fixed;
-    left: 20vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0 0 10vw gray;
-    overflow: scroll;
-}
-
-.popup-forms::-webkit-scrollbar {
-  display: none;
+  width: 50vw;
+  margin: auto;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 10vw gray;
 }
 
 .popup-forms .form-content {
-    width: 70%;
-    margin: auto !important;
+  width: 70%;
+  margin: auto !important;
 }
 
 .sidebar {
@@ -41,35 +33,58 @@
   background-color: rgb(106, 90, 205);
 }
 
-.sidebar-nav::-webkit-scrollbar {
-  display: none;
-}
-
-.sidebutton{
+.sidebutton {
   display: flex;
   justify-content: space-around;
   gap: 10px;
-
 }
-
-.chartcontainer{
+/*********************************************DASHBOARD*************************************/
+.mainContainer{
   display: flex;
 }
-
-.todoTitle{
+.chartcontainer {
+  display: flex;
+}
+.todoTitle {
   padding-top: 16px;
-
 }
 
-.dashboardVehicleList{
+.dashboardVehicleList {
   display: flex;
-  gap:3px
+  gap: 3px;
 }
-.todoContainer{
+.todoContainer {
   display: flex;
   flex-direction: column;
   gap: 17px;
 }
-.recentlyUsed{
+.recentlyUsed {
   margin-left: 17px;
-  }
+}
+/*************************DASHBOARD BOTTOM PANEL**********************/
+.bottomPanelContainer{
+  width: 75rem;
+}
+
+.summaryPanel {
+  display: flex;
+  gap: 3rem;
+  width: 75rem;
+}
+
+
+.summaryContainer {
+  display: flex;
+  margin-top: 12px;
+  gap: 2rem;
+}
+
+.boxItem {
+  display: flex;
+  flex-direction: column;
+}
+
+/****************************************SIDE PANEL***********************/
+
+
+
