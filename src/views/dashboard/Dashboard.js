@@ -9,7 +9,7 @@ import SidePanel from './SidePanel'
 const Dashboard = () => {
   return (
     <>
-      <CContainer className="sidePanel">
+      <CContainer className="mainContainer">
         <CContainer>
           <CRow xs={{ gutterX: 5 }}>
             <CCol>

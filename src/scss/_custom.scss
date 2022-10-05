@@ -28,8 +28,8 @@
 }
 
 .sidebar {
-  width: 16.6rem;
-  margin-top: 118px;
+  width: 16rem;
+  margin-top: 122px;
   background-color: rgb(106, 90, 205);
 }
 
@@ -37,6 +37,10 @@
   display: flex;
   justify-content: space-around;
   gap: 10px;
+}
+/*********************************************DASHBOARD*************************************/
+.mainContainer{
+  display: flex;
 }
 .chartcontainer {
   display: flex;
@@ -57,36 +61,30 @@
 .recentlyUsed {
   margin-left: 17px;
 }
+/*************************DASHBOARD BOTTOM PANEL**********************/
+.bottomPanelContainer{
+  width: 75rem;
+}
 
-.bottomPanel {
+.summaryPanel {
   display: flex;
   gap: 3rem;
- flex-basis: 200px;
- width: 75rem;
+  width: 75rem;
 }
+
+
 .summaryContainer {
   display: flex;
   margin-top: 12px;
   gap: 2rem;
 }
 
-
-// .summaryTitlePanel {
-//   display: flex;
-//   gap: 30rem;
-//   }
-
-// .supportedTitle {
-//   margin-left: 27rem;
-// }
-// .recentTitle {
-// }
 .boxItem {
   display: flex;
   flex-direction: column;
 }
+
 /****************************************SIDE PANEL***********************/
-.sidePanel {
-  display: flex;
-}
+
+
 

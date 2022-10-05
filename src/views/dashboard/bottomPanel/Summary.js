@@ -5,7 +5,7 @@ import { CContainer, CRow, CCol } from '@coreui/react'
 export default function Summary() {
   return (
     <>
-      <div className="bottomPanel">
+      <div className="summaryPanel">
         <CContainer className="summaryContainer">
           <CRow sm={{ cols: 3, gutter: 2 }} lg={{ cols: 3, gutter: 2 }}>
             <CCol>

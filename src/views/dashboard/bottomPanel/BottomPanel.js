@@ -46,27 +46,29 @@ export default function BasicTabs() {
   }
 
   return (
-    <Box sx={{ width: '100%', marginTop: '12px' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="SUMMARY" {...a11yProps(0)} />
-          <Tab label="PAYMENT" {...a11yProps(1)} />
-          <Tab label="VEHICLE TYPE" {...a11yProps(2)} />
-          <Tab label="VEHICLE AUTH" {...a11yProps(3)} />
-        </Tabs>
+    <div className="bottomPanelContainer">
+      <Box sx={{ width: '100%', marginTop: '12px' }}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+            <Tab label="SUMMARY" {...a11yProps(0)} />
+            <Tab label="PAYMENT" {...a11yProps(1)} />
+            <Tab label="VEHICLE TYPE" {...a11yProps(2)} />
+            <Tab label="VEHICLE AUTH" {...a11yProps(3)} />
+          </Tabs>
+        </Box>
+        <BottomPanel value={value} index={0}>
+          {<Summary />}
+        </BottomPanel>
+        <BottomPanel value={value} index={1}>
+          Item Two
+        </BottomPanel>
+        <BottomPanel value={value} index={2}>
+          Item Three
+        </BottomPanel>
+        <BottomPanel value={value} index={3}>
+          Item four
+        </BottomPanel>
       </Box>
-      <BottomPanel value={value} index={0}>
-        {<Summary />}
-      </BottomPanel>
-      <BottomPanel value={value} index={1}>
-        Item Two
-      </BottomPanel>
-      <BottomPanel value={value} index={2}>
-        Item Three
-      </BottomPanel>
-      <BottomPanel value={value} index={3}>
-        Item four
-      </BottomPanel>
-    </Box>
+    </div>
   )
 }
