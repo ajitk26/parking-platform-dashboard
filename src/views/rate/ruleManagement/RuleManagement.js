@@ -491,14 +491,13 @@ const RuleManagement = () => {
                           <option value="6">Spare Model 2</option>
                         </CFormSelect>
                       </CInputGroup>
-
                       <CInputGroup className="form-content">
                         <CInputGroupText component="label" htmlFor="inputGroupSelect01">
                           Extension Rate :
                         </CInputGroupText>
                         <CFormInput></CFormInput>
                       </CInputGroup>
-
+                      3
                       <CInputGroup className="form-content">
                         <CInputGroupText component="label" htmlFor="inputGroupSelect01">
                           Enable self service extension :
@@ -517,7 +516,6 @@ const RuleManagement = () => {
                           label="Not allowed"
                         />
                       </CInputGroup>
-
                       <CInputGroup className="form-content">
                         <CInputGroupText component="label" htmlFor="inputGroupSelect01">
                           Maximum delaye Months :
