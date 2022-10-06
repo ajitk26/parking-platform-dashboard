@@ -98,7 +98,6 @@ const Holiday = () => {
                     <option value="2">Special Holiday (2 day)</option>
                   </CFormSelect>
                 </CInputGroup>
-
                 <div
                   style={{
                     width: '30%',
