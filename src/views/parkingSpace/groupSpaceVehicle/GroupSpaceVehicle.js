@@ -8,29 +8,23 @@ import {
   CButtonGroup,
 } from '@coreui/react'
 const GroupSpaceVehicle = () => {
-  const properties = (val) => {
+  const properties = (val, str) => {
     if (val === 'success') {
       return (
         <CButton color="success" variant="outline" size="sm">
-          Success
+          {str}
         </CButton>
       )
     } else if (val === 'danger') {
       return (
         <CButton color="danger" variant="outline" size="sm">
-          Offline
+          {str}
         </CButton>
       )
-    } else if (val === 'authzone') {
+    } else if (val === 'warning') {
       return (
-        <CButton color="success" variant="outline" size="sm">
-          Main Garage
-        </CButton>
-      )
-    } else if (val === 'expbal') {
-      return (
-        <CButton color="danger" variant="outline" size="sm">
-          12/12/2021
+        <CButton color="warning" variant="outline" size="sm">
+          {str}
         </CButton>
       )
     }
@@ -41,37 +35,36 @@ const GroupSpaceVehicle = () => {
       <CButtonGroup role="group" aria-label="Basic mixed styles example" size="sm">
         <CButton color="info">View</CButton>
         <CButton color="warning">Edit</CButton>
-        <CButton color="success">Update</CButton>
+        <CButton color="success">Space Extension</CButton>
         <CButton color="danger">Delete</CButton>
-        <CButton color="warning">ZoneAuth.</CButton>
       </CButtonGroup>
     )
   }
 
   const columns = [
     {
-      key: 'plateno',
-      label: 'Plate No.',
+      key: 'spaceno',
+      label: 'Space No.',
       _props: { scope: 'col' },
     },
     {
-      key: 'cardno',
-      label: 'Card No.',
+      key: 'parkingname',
+      label: 'Parking Name',
       _props: { scope: 'col' },
     },
     {
-      key: 'driver',
-      label: 'Driver',
+      key: 'zonename',
+      label: 'Zone Name',
       _props: { scope: 'col' },
     },
     {
-      key: 'vehicletype',
-      label: 'Vehicle Type',
+      key: 'groupspacename',
+      label: 'Group Space Name',
       _props: { scope: 'col' },
     },
     {
-      key: 'vehicleauthtype',
-      label: 'Vehicle Auth Type',
+      key: 'spacetype',
+      label: 'Space Type',
       _props: { scope: 'col' },
     },
     {
@@ -80,28 +73,8 @@ const GroupSpaceVehicle = () => {
       _props: { scope: 'col' },
     },
     {
-      key: 'expbal',
-      label: 'Expired / Balance',
-      _props: { scope: 'col' },
-    },
-    {
-      key: 'status',
-      label: 'Status',
-      _props: { scope: 'col' },
-    },
-    {
-      key: 'lstentry',
-      label: 'Last Entry',
-      _props: { scope: 'col' },
-    },
-    {
-      key: 'lstexit',
-      label: 'Last Exit',
-      _props: { scope: 'col' },
-    },
-    {
-      key: 'authzone',
-      label: 'Auth. Zone',
+      key: 'expired',
+      label: 'Expired',
       _props: { scope: 'col' },
     },
     {
@@ -112,17 +85,13 @@ const GroupSpaceVehicle = () => {
   ]
   const items = [
     {
-      plateno: 'ABC123',
-      cardno: ' ',
-      driver: '1',
-      vehicletype: 'Small Car',
-      vehicleauthtype: 'Passport Car',
-      effect: '11/11/2021',
-      expbal: properties('expbal'),
-      status: 'OUT',
-      lstentry: 'N/A',
-      lstexit: 'N/A',
-      authzone: properties('authzone'),
+      spaceno: ' ',
+      parkingname: ' ',
+      zonename: ' ',
+      groupspacename: ' ',
+      spacetype: properties('success', 'Public Spaces'),
+      effect: properties('success', '11/02/2022'),
+      expired: properties('danger', '18/02/2022'),
       operation: operation(),
       _cellProps: { id: { scope: 'row' } },
     },
