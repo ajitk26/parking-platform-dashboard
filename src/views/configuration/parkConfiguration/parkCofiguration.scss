@@ -1,0 +1,24 @@
+.configSidebar {
+  display: flex;
+  border: 3px solid red;
+  width: 280px;
+  height: 440px;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 12px;
+}
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.hoverOver {
+  &:hover {
+    color: red;
+  }
+}
+
+.testCon {
+  display: flex;
+  padding-bottom: 12rem;
+}
