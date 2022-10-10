@@ -4,6 +4,7 @@ import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
+import { Button } from '@mui/material'
 function SidePanel(props) {
   const { children, value, index, ...other } = props
 
@@ -45,23 +46,41 @@ export default function BasicTabs() {
   }
 
   return (
-    <Box sx={{ width: '100%', marginTop: '12px' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="BULLETIN" {...a11yProps(0)} />
-          <Tab label="SOLUTION" {...a11yProps(1)} />
-          <Tab label="PRODUCT" {...a11yProps(2)} />
-        </Tabs>
+    <div className="sidePanel">
+      <Box sx={{ width: '100%', marginTop: '12px' }}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+            <Tab label="BULLETIN" {...a11yProps(0)} />
+            <Tab label="SOLUTION" {...a11yProps(1)} />
+            <Tab label="PRODUCT" {...a11yProps(2)} />
+          </Tabs>
+        </Box>
+        <SidePanel value={value} index={0}>
+          No information
+        </SidePanel>
+        <SidePanel value={value} index={1}>
+          No information
+        </SidePanel>
+        <SidePanel value={value} index={2}>
+          No information
+        </SidePanel>
       </Box>
-      <SidePanel value={value} index={0}>
-        No information
-      </SidePanel>
-      <SidePanel value={value} index={1}>
-        No information
-      </SidePanel>
-      <SidePanel value={value} index={2}>
-        No information
-      </SidePanel>
-    </Box>
+      <div>
+        <Box sx={{ width: '100%', marginTop: '12px', borderBlock: 2, borderColor: 'divider' }}>
+          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Button>TODAY</Button>
+            <Button>MONTH</Button>
+          </Box>
+        </Box>
+      </div>
+      <div>
+        <Box sx={{ width: '100%', marginTop: '12px', borderBlock: 2 }}>
+          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Button>TODAY</Button>
+            <Button>MONTH</Button>
+          </Box>
+        </Box>
+      </div>
+    </div>
   )
 }

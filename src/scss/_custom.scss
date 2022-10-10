@@ -41,6 +41,7 @@
 /*********************************************DASHBOARD*************************************/
 .mainContainer{
   display: flex;
+  gap: 10px;
 }
 .chartcontainer {
   display: flex;
@@ -85,6 +86,10 @@
 }
 
 /****************************************SIDE PANEL***********************/
-
+.sidePanel{
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
 
 
