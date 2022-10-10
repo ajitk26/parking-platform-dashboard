@@ -54,38 +54,68 @@ const TransactionpayRecord = () => {
       _props: { scope: 'col' },
     },
     {
-      key: 'zonename',
-      label: 'Zone Name',
+      key: 'aps',
+      label: 'APS',
       _props: { scope: 'col' },
     },
     {
-      key: 'vehicleauthtype',
-      label: 'Vehicle Auth Type',
+      key: 'orderno',
+      label: 'Order No.',
       _props: { scope: 'col' },
     },
     {
-      key: 'vehicletype',
-      label: 'Vehicle Type',
+      key: 'cardno',
+      label: 'Card No.',
       _props: { scope: 'col' },
     },
     {
-      key: 'ratetype',
-      label: 'Rate Type',
+      key: 'plateno',
+      label: 'Plate No.',
       _props: { scope: 'col' },
     },
     {
-      key: 'modifytime',
-      label: 'Modify Time',
+      key: 'fare',
+      label: 'Fare',
       _props: { scope: 'col' },
     },
     {
-      key: 'modifier',
-      label: 'Modifier',
+      key: 'paid',
+      label: 'Paid',
       _props: { scope: 'col' },
     },
     {
-      key: 'ratefunctions',
-      label: 'Rate Setting/Testing/Copying',
+      key: 'change',
+      label: 'Change',
+      _props: { scope: 'col' },
+    },
+    {
+      key: 'debit',
+      label: 'Debit',
+      _props: { scope: 'col' },
+    },
+    {
+      key: 'invoice',
+      label: 'Invoice',
+      _props: { scope: 'col' },
+    },
+    {
+      key: 'randomcode',
+      label: 'Random Code',
+      _props: { scope: 'col' },
+    },
+    {
+      key: 'identifier',
+      label: 'Identifier',
+      _props: { scope: 'col' },
+    },
+    {
+      key: 'paytime',
+      label: 'Pay Time',
+      _props: { scope: 'col' },
+    },
+    {
+      key: 'paytype',
+      label: 'Pay Type',
       _props: { scope: 'col' },
     },
     {
@@ -94,20 +124,7 @@ const TransactionpayRecord = () => {
       _props: { scope: 'col' },
     },
   ]
-  const items = [
-    {
-      parkingname: 'Mall',
-      zonename: 'Main Garage',
-      vehicleauthtype: 'Passport Car',
-      vehicletype: 'Small Car',
-      ratetype: properties('success', 'Charge for simple accumulation'),
-      modifytime: 'N/A',
-      modifier: 'exparkadmin',
-      ratefunctions: ratefunctions(),
-      operation: operation(),
-      _cellProps: { id: { scope: 'row' } },
-    },
-  ]
+  const items = []
   return (
     <>
       <div className="conf-list">
@@ -157,50 +174,52 @@ const TransactionpayRecord = () => {
             style={{
               display: 'flex',
               flexDirection: 'row',
-              width: '35%',
+              width: '75%',
               minHeight: '5vh',
               justifyContent: 'space-between',
               flexWrap: 'wrap',
             }}
           >
-            <CFormSelect aria-label="Default select example" style={{ width: '45%' }}>
+            <CFormSelect aria-label="Default select example" style={{ width: '20%' }}>
               <option>Mall</option>
               <option value="1">Mall</option>
             </CFormSelect>
-            <CFormSelect aria-label="Default select example" style={{ width: '45%' }}>
-              <option>- Choose Zone -</option>
-              <option value="1">Main Garage</option>
+            <CFormSelect aria-label="Default select example" style={{ width: '20%' }}>
+              <option>- Choose APS -</option>
+              <option value="1"></option>
             </CFormSelect>
+            <CFormSelect aria-label="Default select example" style={{ width: '20%' }}>
+              <option>PLate No.</option>
+              <option value="1">Invoice</option>
+              <option value="1">Identifier</option>
+            </CFormSelect>
+            <input type="text" placeholder="Search Content" style={{ width: '20%' }}></input>
           </div>
           <div
             style={{
               display: 'flex',
               flexDirection: 'row',
-              width: '51%',
+              width: '75%',
               minHeight: '5vh',
               justifyContent: 'space-between',
               alignItems: 'center',
               flexWrap: 'wrap',
             }}
           >
-            <CFormSelect aria-label="Default select example" style={{ width: '30%' }}>
-              <option>Vehicle Auth Type</option>
-              <option value="1">VIP</option>
-              <option value="2">Passport Car</option>
-              <option value="3">Stored value Car</option>
-              <option value="4">Parking</option>
-              <option value="5">Free Car</option>
-              <option value="6">Parking pool Car</option>
-              <option value="7">Hourly Rental Car</option>
+            <CFormSelect aria-label="Default select example" style={{ width: '20%' }}>
+              <option>Pay Status</option>
+              <option value="1">Normal</option>
+              <option value="2">Revocation</option>
             </CFormSelect>
-            <CFormSelect aria-label="Default select example" style={{ width: '30%' }}>
-              <option>Vehicle Type</option>
-              <option value="1">Motorcycle</option>
-              <option value="2">Small Car</option>
-              <option value="3">Medium Car</option>
-              <option value="4">Large Car</option>
-              <option value="5">Spare Model 1</option>
-              <option value="6">Spare Model 2</option>
+            <CFormSelect aria-label="Default select example" style={{ width: '20%' }}>
+              <option>Pay Result</option>
+              <option value="1">Free</option>
+              <option value="2">Paid</option>
+            </CFormSelect>
+            <CFormSelect aria-label="Default select example" style={{ width: '20%' }}>
+              <option>Pay type</option>
+              <option value="1">Cash</option>
+              <option value="2">Line Pay</option>
             </CFormSelect>
             <CButton color="info" shape="rounded-0" size="sm" style={{ height: '2rem' }}>
               Search
