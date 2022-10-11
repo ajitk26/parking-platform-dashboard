@@ -4,11 +4,12 @@ import DashboardChart from '../dashboard/DashboardChart'
 import Todo from '../dashboard/Todo'
 import RecentlyUsed from './RecentlyUsed'
 import BottomPanel from './bottomPanel/BottomPanel'
+import SidePanel from './SidePanel'
 
 const Dashboard = () => {
   return (
-    <div>
-      <CContainer>
+    <>
+      <CContainer className="mainContainer">
         <CContainer>
           <CRow xs={{ gutterX: 5 }}>
             <CCol>
@@ -19,10 +20,11 @@ const Dashboard = () => {
             </CCol>
           </CRow>
           <RecentlyUsed />
+          <BottomPanel />
         </CContainer>
-        <BottomPanel />
+        <SidePanel />
       </CContainer>
-    </div>
+    </>
   )
 }
 
