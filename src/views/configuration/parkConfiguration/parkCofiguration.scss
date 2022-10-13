@@ -1,24 +1,35 @@
-.configSidebar {
-  display: flex;
-  border: 3px solid red;
-  width: 280px;
-  height: 440px;
-  flex-direction: column;
-  gap: 12px;
-  padding-left: 12px;
-}
 .sidebarContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.hoverOver {
-  &:hover {
-    color: red;
-  }
+  margin-top: 12px;
+  position: fixed;
 }
 
-.testCon {
+.configContainer {
   display: flex;
-  padding-bottom: 12rem;
+  gap: 1rem;
+  margin-top: 10px;
+  width: 95rem;
+
+}
+
+
+.basicElement {
+  display: flex;
+  gap: 14%;
+  margin-top: 20px;
+  margin-left: 6rem;
+}
+.basicTitle{
+  display: flex;
+  flex-direction: column;
+}
+
+.basicForm{
+  display: flex;
+  gap: 12rem;
+}
+
+.configButton{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 4rem;
 }

@@ -332,10 +332,11 @@ const _nav = [
         name: 'User Management',
         to: '/rolesAndPermission/userManagement',
       },
+
       {
         component: CNavItem,
         name: 'Employee Management',
-        to: 'rolesAndPermission/employeeManagement',
+        to: '/rolesAndPermission/employeeManagement',
       },
     ],
   },
