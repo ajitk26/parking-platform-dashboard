@@ -294,7 +294,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Cash Add Record',
-        to: '/autoPayStation/cashAndRecord',
+        to: '/autoPayStation/cashAddRecord',
       },
     ],
   },
