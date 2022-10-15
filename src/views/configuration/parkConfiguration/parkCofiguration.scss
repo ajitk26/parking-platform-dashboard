@@ -1,0 +1,35 @@
+.sidebarContainer {
+  margin-top: 12px;
+  position: fixed;
+}
+
+.configContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 10px;
+  width: 95rem;
+
+}
+
+
+.basicElement {
+  display: flex;
+  gap: 14%;
+  margin-top: 20px;
+  margin-left: 6rem;
+}
+.basicTitle{
+  display: flex;
+  flex-direction: column;
+}
+
+.basicForm{
+  display: flex;
+  gap: 12rem;
+}
+
+.configButton{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 4rem;
+}

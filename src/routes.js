@@ -8,6 +8,12 @@ const ZoneList = React.lazy(() => import('./views/configuration/zoneList/ZoneLis
 const ParkConfiguration = React.lazy(() =>
   import('./views/configuration/parkConfiguration/ParkConfiguration'),
 )
+const BasicSetting = React.lazy(() =>
+  import('./views/configuration/parkConfiguration/basicSetting/BasicSetting'),
+)
+const AdvancedSetting = React.lazy(() =>
+  import('./views/configuration/parkConfiguration/advancedSetting/AdvancedSetting'),
+)
 //Equipment
 const Entrance = React.lazy(() => import('./views/configuration/equipments/entrance/Entrance'))
 const Cashier = React.lazy(() => import('./views/configuration/equipments/cashier/Cashier'))
@@ -129,7 +135,11 @@ const routes = [
     name: 'Park Configuration',
     element: ParkConfiguration,
   },
-  //Vehicle
+  {
+    path: '/configuration/parkConfiguration/*',
+    name: 'Park Configuration',
+    element: ParkConfiguration,
+  },
 
   { path: '/vehicle', name: 'Vehicle', exact: true },
   { path: '/vehicle/vehicleList', name: 'Vehicle List', element: VehicleList },
