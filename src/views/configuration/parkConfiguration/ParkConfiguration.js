@@ -10,7 +10,7 @@ const ParkConfiguration = () => {
     <div>
       <h2>Sub Configuration</h2>
       <div>
-        <CFormSelect aria-label="Default select example" style={{ width: '25%' }}>
+        <CFormSelect aria-label="Default select example" style={{ width: '20%' }}>
           <option>Mall</option>
           <option>Garage</option>
         </CFormSelect>
