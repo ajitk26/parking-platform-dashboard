@@ -20,53 +20,43 @@ const configNav = [
   {
     component: CNavItem,
     name: 'Gateway',
-    to: 'rolesAndPermission/employeeManagement',
+    to: '/configuration/parkConfiguration/gateway',
     icon: <CIcon icon={cilPlus} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Cashier',
-    to: 'rolesAndPermission/employeeManagement',
+    to: '/configuration/parkConfiguration/cashier',
     icon: <CIcon icon={cilPlus} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Handheld',
-    to: 'rolesAndPermission/employeeManagement',
+    to: '/configuration/parkConfiguration/handheld',
     icon: <CIcon icon={cilPlus} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'AutoPay Station',
-    to: 'rolesAndPermission/employeeManagement',
+    to: '/configuration/parkConfiguration/autoPayStation',
     icon: <CIcon icon={cilPlus} customClassName="nav-icon" />,
   },
   {
-    component: CNavGroup,
+    component: CNavItem,
     name: 'Channel',
-    to: '/autoPayStation',
+    to: '/configuration/parkConfiguration/channel',
     icon: <CIcon icon={cilPlus} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-      },
-    ],
   },
   {
-    component: CNavGroup,
+    component: CNavItem,
     name: 'Controller',
-    to: '/autoPayStation',
+    to: '/configuration/parkConfiguration/controller',
     icon: <CIcon icon={cilPlus} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-      },
-    ],
   },
   {
     component: CNavItem,
     name: 'Discounter',
-    to: 'rolesAndPermission/employeeManagement',
+    to: '/configuration/parkConfiguration/discounter',
     icon: <CIcon icon={cilPlus} customClassName="nav-icon" />,
   },
 ]
