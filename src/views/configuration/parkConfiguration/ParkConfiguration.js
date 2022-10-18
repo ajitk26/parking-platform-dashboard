@@ -1,17 +1,23 @@
 import React from 'react'
 import { CFormSelect } from '@coreui/react'
+import './parkCofiguration.scss'
+
+import ConfigContent from './ConfigContent'
+import ConfigSidebar from './ConfigSidebar'
 
 const ParkConfiguration = () => {
   return (
     <div>
       <h2>Sub Configuration</h2>
       <div>
-        <CFormSelect aria-label="Default select example" style={{ width: '25%' }}>
+        <CFormSelect aria-label="Default select example" style={{ width: '20%' }}>
           <option>Mall</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option>Garage</option>
         </CFormSelect>
+      </div>
+      <div className="configContainer flex-grow ">
+        <ConfigSidebar />
+        <ConfigContent />
       </div>
     </div>
   )

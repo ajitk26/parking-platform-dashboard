@@ -294,7 +294,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Cash Add Record',
-        to: '/autoPayStation/cashAndRecord',
+        to: '/autoPayStation/cashAddRecord',
       },
     ],
   },
@@ -332,10 +332,11 @@ const _nav = [
         name: 'User Management',
         to: '/rolesAndPermission/userManagement',
       },
+
       {
         component: CNavItem,
         name: 'Employee Management',
-        to: 'rolesAndPermission/employeeManagement',
+        to: '/rolesAndPermission/employeeManagement',
       },
     ],
   },

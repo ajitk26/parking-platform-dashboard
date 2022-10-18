@@ -6,7 +6,7 @@ import { CSidebar, CSidebarNav, CSidebarToggler } from '@coreui/react'
 import { AppSidebarNav } from './AppSidebarNav'
 
 import SimpleBar from 'simplebar-react'
-import 'simplebar/dist/simplebar.min.css'
+// import 'simplebar/dist/simplebar.min.css'
 
 // sidebar nav config
 import navigation from '../_nav'
@@ -18,7 +18,7 @@ const AppSidebar = () => {
 
   return (
     <CSidebar
-      className="sidebar"
+      className="mainSidebar"
       position="fixed"
       unfoldable={unfoldable}
       visible={sidebarShow}
