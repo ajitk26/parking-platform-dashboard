@@ -2,6 +2,11 @@
   display: flex;
   flex-direction: column;
 }
+.logo{
+  margin-right: 95rem;
+  display: flex;
+}
+
 
 .entrance-input {
   color: grey;
@@ -28,7 +33,7 @@
 }
 
 .mainSidebar {
-  margin-top: 122px;
+  margin-top: 128px;
   background-color: rgb(106, 90, 205);
 }
 
@@ -40,7 +45,6 @@
 /*********************************************DASHBOARD*************************************/
 .mainContainer {
   display: flex;
-  gap: 10px;
 }
 .chartcontainer {
   display: flex;
