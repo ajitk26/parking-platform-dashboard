@@ -26,11 +26,6 @@
   gap: 12rem;
 }
 
-.configButton {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 4rem;
-}
 .configFactoryReset {
   display: flex;
   justify-content: space-between;
@@ -41,4 +36,12 @@
   max-height: 32rem;
   display: flex;
   gap: 10px;
+}
+
+.configNav{
+  display: flex;
+}
+.configAutoPay{
+  display: flex;
+  gap: 8rem;
 }

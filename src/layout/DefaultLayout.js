@@ -3,16 +3,19 @@ import { AppContent, AppSidebar, AppHeader } from '../components/index'
 
 const DefaultLayout = () => {
   return (
-    <div>
-      <div className="wrapper d-flex flex-column min-vh-100 w-100">
+    <>
+      <div className="wrapper d-flex flex-column min-vh-100 ">
         <AppHeader />
 
-        <AppSidebar />
-        <div className="body flex-grow-1 w-100">
-          <AppContent />
+        <div className="body flex-grow-1 px-3  ">
+          <div className="test">
+            <AppSidebar />
+
+            <AppContent />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

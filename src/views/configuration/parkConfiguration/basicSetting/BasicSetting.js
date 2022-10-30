@@ -1,11 +1,11 @@
 import React from 'react'
 import { Divider, Button } from '@mui/material'
-import { CRow, CCol, CFormInput, CFormLabel, CForm, CButton } from '@coreui/react'
+import { CRow, CCol, CFormInput, CFormLabel, CForm } from '@coreui/react'
 
 const BasicSetting = () => {
   return (
     <div>
-      <div className="configButton">
+      <div style={{ marginBottom: 13 }}>
         <Button variant="contained">Submit</Button>
       </div>
 
