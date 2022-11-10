@@ -19,12 +19,14 @@ import { cilMenu } from '@coreui/icons'
 
 import { AppBreadcrumb } from './index'
 import { AppHeaderDropdown } from './header/index'
+import logo from '../assets/brand/logo1compressed.png'
+import logo1 from '../assets/brand/logocompressed.png'
 const AppHeader = () => {
   const dispatch = useDispatch()
   const sidebarShow = useSelector((state) => state.sidebarShow)
 
   return (
-    <CHeader position="sticky" className="mb-4">
+    <CHeader position="sticky" className="mb-4" style={{ backgroundColor: 'rgb(252, 252, 252)' }}>
       <CContainer fluid>
         <CHeaderToggler
           className="ps-1"
@@ -32,13 +34,12 @@ const AppHeader = () => {
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
-        {/* <CHeaderBrand className="mx-auto d-md-none" to="/">
-        </CHeaderBrand> */}
+        <CHeaderBrand>
+          <img src={logo1} style={{ height: 42 }} />
+          <img src={logo} style={{ height: 42 }} />
+        </CHeaderBrand>
         <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
-            <CHeaderBrand>
-              <CIcon alt="Logo" />
-            </CHeaderBrand>
             <CDropdown>
               <CDropdownToggle color="white">Services</CDropdownToggle>
               <CDropdownMenu>
